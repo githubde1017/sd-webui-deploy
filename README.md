@@ -133,14 +133,6 @@ EXTRA_ARGS=--precision full --no-half --xformers
 - 使用防火牆限制訪問
 - 定期更新模型和 Docker 映像
 
-## 許可證
-
-本項目基於 [選擇合適的開源許可證]，遵循上游倉庫的許可條款。
-
-## 社區與支持
-
-- GitHub Issues: [倉庫地址]/issues
-- Discord: [Stable Diffusion 社區邀請連結]
 
 ## 貢獻指南
 
@@ -149,6 +141,170 @@ EXTRA_ARGS=--precision full --no-half --xformers
 3. 提交更改 `git commit -m '增加了某些特性'`
 4. 推送到分支 `git push origin feature/amazing-feature`
 5. 提交 Pull Request
+
+## Git 基礎教學
+
+### Git 簡介
+
+Git 是一個分散式版本控制系統，用於追蹤和管理程式碼的變更。
+
+### 1. 安裝 Git
+
+#### Windows
+1. 下載 Git：[https://git-scm.com/download/win](https://git-scm.com/download/win)
+2. 安裝時選擇默認設置
+3. 安裝完成後，打開 Git Bash
+
+#### Linux (Ubuntu)
+```bash
+sudo apt-get update
+sudo apt-get install git
+```
+
+#### macOS
+1. 使用 Homebrew：`brew install git`
+2. 或下載官方安裝程式
+
+### 2. 基本配置
+
+設置用戶名和郵箱：
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
+### 3. 基本工作流程
+
+#### 創建倉庫
+```bash
+# 創建新目錄
+mkdir my-project
+cd my-project
+
+# 初始化 Git 倉庫
+git init
+```
+
+#### 基本操作
+```bash
+# 查看狀態
+git status
+
+# 添加文件到暫存區
+git add .                # 添加所有文件
+git add filename.txt     # 添加特定文件
+
+# 提交更改
+git commit -m "提交描述"
+
+# 查看提交歷史
+git log
+```
+
+### 4. 分支管理
+
+```bash
+# 查看分支
+git branch
+
+# 創建新分支
+git branch new-feature
+
+# 切換分支
+git checkout new-feature
+
+# 創建並切換到新分支
+git checkout -b another-feature
+
+# 合併分支
+git checkout main
+git merge new-feature
+```
+
+### 5. 遠程倉庫操作
+
+#### 克隆倉庫
+```bash
+git clone https://github.com/username/repository.git
+```
+
+#### 推送到遠程倉庫
+```bash
+# 添加遠程倉庫
+git remote add origin https://github.com/username/repository.git
+
+# 推送代碼
+git push -u origin main
+```
+
+#### 拉取最新代碼
+```bash
+git pull origin main
+```
+
+### 6. 忽略文件
+
+創建 `.gitignore` 文件：
+```bash
+# 忽略所有 .log 文件
+*.log
+
+# 忽略 build 目錄
+/build/
+
+# 忽略特定文件
+secret.txt
+```
+
+### 7. 常用命令速查表
+
+| 命令 | 作用 |
+|------|------|
+| `git clone` | 克隆倉庫 |
+| `git status` | 查看倉庫狀態 |
+| `git add` | 添加文件到暫存區 |
+| `git commit` | 提交更改 |
+| `git push` | 推送到遠程倉庫 |
+| `git pull` | 拉取遠程倉庫最新代碼 |
+| `git branch` | 查看分支 |
+| `git checkout` | 切換分支 |
+| `git merge` | 合併分支 |
+
+### 8. 實用技巧
+
+#### 撤銷更改
+```bash
+# 撤銷工作區的修改
+git checkout -- filename
+
+# 撤銷暫存區的修改
+git reset HEAD filename
+```
+
+#### 查看差異
+```bash
+# 查看未暫存的修改
+git diff
+
+# 查看已暫存的修改
+git diff --staged
+```
+
+### 9. 學習資源
+
+- 官方文檔：[https://git-scm.com/doc](https://git-scm.com/doc)
+- 線上學習：
+  - GitHub Learning Lab
+  - Atlassian Git 教程
+  - Codecademy Git 課程
+
+### 注意事項
+
+1. 不要提交敏感信息
+2. 編寫有意義的提交信息
+3. 定期同步遠程倉庫
+4. 使用分支進行功能開發
+
 
 ---
 
